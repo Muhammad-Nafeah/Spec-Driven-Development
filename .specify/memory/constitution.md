@@ -1,55 +1,42 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: N/A → 1.0.0
+- Modified principles: All principles added as new
+- Added sections: All sections added as new
+- Removed sections: None
+- Templates requiring updates: ✅ Updated
+- Follow-up TODOs: None
+-->
+# Todo In-Memory Python Console Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development
+All behavior must be defined in specifications before implementation. No code shall be written without corresponding specification documentation that clearly defines the expected behavior, inputs, outputs, and acceptance criteria.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Agentic Development
+Implementation must follow the Agentic Dev Stack workflow end-to-end. All development must be driven through Claude Code and Spec-Kit Plus tools, with no manual coding outside the defined workflow.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Process Over Code
+Evaluation focuses on specs, plans, tasks, and iterations rather than manual coding. The quality of specifications, planning artifacts, and task breakdowns takes precedence over the code implementation itself.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Clean Code Standards
+Code must be readable, modular, and well-structured. All code must follow Python best practices, maintain clear separation of concerns, and include appropriate documentation and type hints where beneficial.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Separation of Concerns
+Core logic must be independent from CLI interaction. The business logic for todo operations must be implemented separately from the command-line interface layer to enable testability and reusability.
 
-### [PRINCIPLE_6_NAME]
+### VI. Deterministic Behavior
 
+All Todo operations must exhibit deterministic behavior. Operations must produce consistent, predictable results given the same inputs and initial state, with no random or time-dependent behavior in core functionality.
 
-[PRINCIPLE__DESCRIPTION]
+## Technology and Implementation Constraints
+Language: Python 3.13+ with UV package manager, Tooling: Claude Code, Spec-Kit Plus, Interface: Command-line / console only, Storage: In-memory only (no files, no database), No external services or network calls, No web, AI, or cloud components in this phase.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow and Quality Standards
+All functionality must originate from Spec-Kit Plus specifications. No manual coding; all implementation generated via Claude Code. Python project structure must be clean and conventional. Core logic must be testable independently of the CLI. Clear naming, documentation, and modular design are required.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes all other development practices and must be followed for all work on this project. All pull requests and code reviews must verify compliance with these principles. Any deviation must be documented with clear justification and approval. The constitution may only be amended through the formal amendment process documented in the project's governance procedures.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-02 | **Last Amended**: 2026-01-02
